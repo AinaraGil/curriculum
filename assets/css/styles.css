@@ -1,0 +1,622 @@
+/* RESET ---------------------------------------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+/* TIPOGRAFÍAS ---------------------------------------------------------------*/
+
+@font-face {
+  font-family: "Brockmann";
+  src: url("../fonts/BrockmannRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/PlayfairDisplay-Italic.woff") format("woff");
+  font-style: italic;
+}
+
+/* PALETA DE COLOR ----------------------------------------------------------------*/
+
+:root {
+  --beige-10: #f9f8f3;
+  --pink-10: #e1d2f3;
+  --green-20: #d9e989;
+
+  --orange-80: #fb9c1c;
+
+  --black-90: #1c1b1f;
+  --black-100: #000000;
+}
+
+/* DECLARACIONES GLOBALES -----------------------------------------------------------------*/
+
+body {
+  background-color: var(--beige-10);
+  font-family: "Brockmann", sans-serif;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.font-playfair {
+  font-family: "Playfair Display", sans-serif;
+}
+
+.font-brockmann {
+  font-family: "Brockmann", sans-serif;
+}
+
+/* Clases de color */
+
+.beige-10 {
+  color: var(--beige-10);
+}
+
+.pink-10 {
+  color: var(--pink-10);
+}
+
+.green-20 {
+  color: var(--green-20);
+}
+
+.orange-80 {
+  color: var(--orange-80);
+}
+
+.black-90 {
+  color: var(--black-90);
+}
+
+.black-100 {
+  color: var(--black-100);
+}
+
+/* MENÚ --------------------------------------------------------------------------------*/
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 10px 24px 0;
+}
+
+.header .header__list {
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+  padding: 18px 24px;
+  border-radius: 100px;
+  list-style: none;
+  background-color: var(--black-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.header__link {
+  font-family: "Brockmann", sans-serif;
+  color: white;
+  text-decoration: none;
+  text-wrap: nowrap;
+  font-size: 1rem;
+}
+
+.header__link:hover {
+  color: var(--green-20);
+}
+
+/* ENCABEZADOS -------------------------------------------------------------------------*/
+h2 {
+  color: var(--blue);
+  font-size: 1.9rem;
+  letter-spacing: -2px;
+}
+
+/* CUERPO DE TEXTO --------------------------------------------------------------------- */
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* SECCIONES ----------------------------------------------------------------------------*/
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Hero */
+.section--hero .hero__container {
+  background: radial-gradient(circle at top, var(--orange-80) 35%, transparent 75%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-top: 100px;
+}
+
+.section--hero h1 {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  z-index: 0;
+}
+
+.section--hero h1 span {
+  position: absolute;
+  white-space: nowrap;
+}
+
+.section--hero img {
+  filter: grayscale(100%);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.section--hero h1 .text-senior {
+  left: 27%;
+  top: 185px;
+}
+
+.section--hero h1 .text-uxui {
+  left: 29%;
+  top: 250px;
+}
+
+.section--hero h1 .overly-1 {
+  background: radial-gradient(ellipse at center, var(--green-20) 0%, transparent 75%);
+  left: 23%;
+  top: 73px;
+  width: 400px;
+  height: 70px;
+  z-index: -1;
+  top: 250px;
+}
+
+.section--hero h1 .text-web {
+  left: 58%;
+  top: 158px;
+}
+
+.section--hero h1 .text-designer {
+  top: 220px;
+  left: 59%;
+}
+
+.section--hero h1 .overly-2 {
+  background: radial-gradient(ellipse at center, var(--green-20) 0%, transparent 75%);
+  top: 232px;
+  left: 55%;
+  width: 450px;
+  height: 70px;
+  z-index: -1;
+}
+
+/* Introduccion */
+.section--introduction {
+  background-color: var(--black-90);
+}
+
+.section--introduction h2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  line-height: 0.9;
+  margin: 0;
+}
+
+.section--introduction h2 span:first-child {
+  display: flex;
+  align-items: center;
+  text-wrap: nowrap;
+  gap: 8px;
+}
+
+.section--introduction h2 span:last-child {
+  font-size: 3.4rem;
+}
+
+.introduction__container {
+  padding: 80px 40px;
+  display: flex;
+  gap: 40px;
+}
+
+.section--introduction p {
+  margin: 0;
+}
+
+/* Formacion academica y Experiencia laboral  */
+
+.section-row {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: radial-gradient(circle at center, var(--green-20) -50%, transparent 50%);
+}
+
+.section-row__column {
+  flex: 1;
+  padding: 80px 40px;
+}
+
+/* Headers en formato píldora */
+.section__header {
+  display: flex;
+  align-items: center;
+  padding: 8px 30px 8px 8px;
+  border-radius: 100px;
+  margin-bottom: 40px;
+  width: 100%;
+  gap: 15px;
+}
+
+.section__header--academic {
+  background-color: var(--green-20);
+}
+
+.section__header--experience {
+  background-color: var(--pink-10);
+}
+
+.section__icon-wrapper {
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.section__icon {
+  width: 25px;
+  height: 25px;
+}
+
+.section__title {
+  font-size: 1.6rem;
+  color: var(--black-100);
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+/* Subtítulos compartidos */
+.subsection__title {
+  font-size: 1.5rem;
+  color: var(--black-100);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #999;
+  font-weight: normal;
+}
+
+/*Educación */
+.education {
+  margin-bottom: 40px;
+}
+
+.education__degree {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin: 0 0 5px 0;
+}
+
+.education__institution {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0;
+}
+
+/* Cursos */
+.course__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.course {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.course__icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.course__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.course__title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.course__description {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Experiencia laboral */
+.section--experience .experience__list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.job {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.job__header,
+.job__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.job__body {
+  gap: 10px;
+}
+
+.job__company {
+  font-size: 1rem;
+  color: var(--black-100);
+}
+
+.job__time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.job__label {
+  font-size: 1.1rem;
+}
+
+.job__list {
+  padding-left: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.job__item {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.job__item::marker {
+  color: var(--black-100);
+}
+
+/* Habilidades */
+
+.section--habilities {
+  background-image: url("/assets/img/bg-habilidades.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.habilities__container {
+  padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.habilities__container .subtitle__container {
+  background-color: var(--orange-80);
+  width: fit-content;
+  margin: 0;
+}
+
+.subtitle__container {
+  display: flex;
+  align-items: center;
+  padding: 8px 30px 8px 8px;
+  border-radius: 100px;
+  width: 100%;
+  gap: 15px;
+}
+
+.section--habilities .skills__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.section--habilities .skills__list .skills__tag {
+  color: var(--black-100);
+  border: 1px solid var(--black-100);
+  padding: 6px 15px;
+  text-wrap: nowrap;
+  border-radius: 100px;
+}
+
+/* Contacto */
+.section--contact .contact__container {
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section__container--contact {
+  display: flex;
+  gap: 10px;
+  z-index: 1;
+}
+
+.section--contact .subtitle__container {
+  background-color: var(--pink-10);
+}
+
+.section--contact .subtitle__container {
+  position: relative;
+  margin-right: -46px;
+}
+
+.section--contact .circle {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  background-color: var(--beige-10);
+  border-radius: 100px;
+  right: -1px;
+}
+
+.section--contact .btn {
+  background-color: var(--black-90);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.section--contact .btn svg {
+  width: 25px;
+  color: white;
+}
+
+.section--contact .btn:hover {
+  background-color: var(--green-20);
+}
+
+.section--contact .btn:hover svg {
+  color: var(--black-90);
+}
+
+/* MEDIA QUERY ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+@media (max-width: 850px) {
+  .header .header__list {
+    overflow-x: auto;
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--black-100) transparent;
+    justify-content: start;
+  }
+
+  .section .container,
+  .section-row__column {
+    padding: 60px 24px;
+  }
+
+  .section--hero .container {
+    padding-top: 150px;
+    padding-bottom: 0px;
+  }
+
+  .section--hero h1 {
+    position: initial;
+    flex-wrap: wrap;
+    font-size: 3rem;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .section--hero h1 span {
+    position: initial;
+    flex-wrap: wrap;
+    font-size: 3rem;
+    gap: 10px;
+  }
+
+  .section--hero .overly-2 {
+    display: none;
+  }
+
+  .section--hero .overly-1 {
+    position: absolute;
+    display: flex;
+    width: 380px !important;
+    height: 200px !important;
+    top: 85px !important;
+    left: 0 !important;
+  }
+
+  .section-row {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .section--academic-training .container,
+  .section--experience .container {
+    padding: 0;
+  }
+
+  .section--experience {
+    padding-top: 0;
+  }
+
+  .habilities__container {
+    flex-wrap: wrap;
+  }
+
+  .header__list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-start;
+  }
+
+  .introduction__container {
+    flex-wrap: wrap;
+  }
+
+  .contact__container .section__title {
+    font-size: 1.3rem;
+  }
+
+  .contact__container .subtitle__container {
+    gap: 10px;
+  }
+  .section__container--contact {
+    gap: 5px;
+  }
+}
