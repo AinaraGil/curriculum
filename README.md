@@ -1,66 +1,45 @@
-# Portfolio
+# Ainara Gil — Portfolio Web & UI/UX Design
 
-Portfolio estático (HTML + CSS puro, sin frameworks ni build step), con la
-misma identidad visual del [CV online](https://ainaragil.github.io/curriculum/):
-paleta beige/negro/rosa/verde/naranja, nav en píldora, headers de sección en
-píldora y tipografías Manrope + Playfair Display italic.
+Portfolio profesional desarrollado con **HTML5 semántico** y **CSS3 puro**, sin frameworks ni dependencias de compilación. El sitio está diseñado como una plataforma ligera, rápida y accesible para presentar casos de estudio reales en diseño de producto digital, frontend y dirección visual de marca.
 
-## Estructura
+🔗 **Demo en vivo:** [https://ainaragil.github.io/portfolio/](https://ainaragil.github.io/portfolio/)  
+💼 **LinkedIn:** [linkedin.com/in/ainaragil](https://www.linkedin.com/in/ainaragil/)  
+📫 **Contacto:** ainaragilcm@gmail.com
 
-```
-index.html                                   → portada con grilla de proyectos
-proyecto-rediseno-web-corporativa.html        → vista de detalle de un proyecto
-proyecto-identidad-evento-blockchain.html     → vista de detalle de otro proyecto
-proyecto-landing-fintech.html                 → vista de detalle de otro proyecto
-assets/css/styles.css                         → todos los estilos
-assets/img/covers/                            → portadas para las cards
-assets/img/shots/<proyecto>/                  → imágenes de cada proyecto
-```
+---
 
-Todas las imágenes son placeholders en SVG generados a modo de ejemplo.
-Reemplazalas por tus capturas reales manteniendo el mismo nombre de archivo,
-o cambiá la ruta en el HTML.
+## 🛠️ Stack & Metodología
 
-## Editar contenido
+* **Diseño & Prototipado:** Figma, Adobe XD, Adobe Creative Cloud (Illustrator, Photoshop, After Effects).
+* **Frontend:** HTML5 Semántico, CSS3 Modular (Flexbox / Grid), JavaScript, Tailwind CSS.
+* **Criterios de desarrollo:** Mobile-first, accesibilidad web (pautas WCAG) y optimización de carga sin build steps.
 
-- **Textos e info personal**: abrí `index.html` y reemplazá "Tu Nombre", el
-  texto del hero, la intro, "Sobre mí" y los links de contacto (LinkedIn,
-  email, Instagram).
-- **Cada proyecto**: abrí su archivo `proyecto-*.html` y editá título,
-  resumen, metadatos (`cliente`, `rol`, `año`, `herramientas`) y los
-  párrafos de cada bloque de texto.
+---
 
-## Cómo funciona la vista de proyecto
+## 📂 Casos de estudio incluidos
 
-Cada página de proyecto es una sola sección que scrollea de corrido,
-armada con bloques que podés combinar como quieras:
+| Proyecto | Especialidad | Entregables clave |
+| :--- | :--- | :--- |
+| **IEBS Business School** | UI/UX & Frontend | Expansión del Design System, componentes accesibles, landings SEM y piezas de marketing. |
+| **European Blockchain Convention** | Identidad Visual & Eventos | Dirección visual, escenografía de gran formato, señalética física, acreditaciones y material digital. |
+| **Flash Data SLU** | Rediseño Web & Frontend | Arquitectura de información B2B, maquetación frontend desde cero e identidad corporativa. |
+| **Adonia Cosmética** | E-commerce & Branding | Optimización UX del funnel de compra, flujos mobile-first, banners y newsletters comerciales. |
 
-- `project-block--full` → una imagen sola, ancho completo (como en Behance).
-- `project-block--two-col` → dos imágenes lado a lado.
-- `project-block--text` → un bloque de texto (para contar proceso, contexto, etc.).
+---
 
-Copiá y pegá los bloques que necesites, en el orden que quieras, dentro del
-`<main>` de cada página de proyecto.
+## 📁 Estructura del repositorio
 
-## Agregar un proyecto nuevo
-
-1. Duplicá uno de los archivos `proyecto-*.html` y renombralo
-   (ej: `proyecto-mi-nuevo-proyecto.html`).
-2. Editá su contenido y las rutas de las imágenes.
-3. En `index.html`, copiá un bloque `<a class="card">...</a>` dentro de
-   `.projects__grid` y apuntá el `href` al nuevo archivo.
-4. Sumá una portada en `assets/img/covers/` y las imágenes del proyecto en
-   `assets/img/shots/<nombre-del-proyecto>/`.
-
-## Subir a GitHub Pages
-
-1. Creá un repositorio nuevo en GitHub (por ejemplo `portfolio`).
-2. Subí todos estos archivos a la raíz del repo (respetando la carpeta
-   `assets/`).
-3. En el repo: **Settings → Pages → Source**, elegí la rama `main` y la
-   carpeta `/ (root)`.
-4. En un par de minutos tu portfolio queda publicado en:
-   `https://tu-usuario.github.io/portfolio/`
-
-Si preferís que la web quede en `https://tu-usuario.github.io/` directo
-(sin `/portfolio`), llamá al repositorio `tu-usuario.github.io`.
+```text
+portfolio/
+├── index.html                           → Portada (Hero, Sobre mí, Experiencia, Casos de estudio y Contacto)
+├── sobre-mi.html                        → Perfil detallado, trayectoria y formación
+├── iebs.html                            → Caso de estudio: IEBS Digital School
+├── european-blockchain-convention.html  → Caso de estudio: European Blockchain Convention
+├── flashdata.html                       → Caso de estudio: Flash Data SLU
+├── adonia.html                          → Caso de estudio: Adonia Cosmética Ecológica
+└── assets/
+    ├── css/styles.css                   → Hoja de estilos global estructurada
+    ├── fonts/                           → Tipografías locales (Brockmann, Playfair Display)
+    └── img/
+        ├── svg/                         → Iconografía vectorial
+        └── shots/                       → Material gráfico e infografías de proyectos
