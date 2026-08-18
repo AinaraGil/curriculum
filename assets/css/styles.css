@@ -551,7 +551,7 @@ a {
 
 /* HABILIDADES */
 .section--habilities {
-  background-image: url("/assets/img/bg-habilidades.webp");
+  background-image: url("../img/bg-habilidades.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
