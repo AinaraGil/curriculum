@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="es">
     <head>
         <meta charset="UTF-8" />
@@ -10,8 +9,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@1,400..900&display=swap"
             rel="stylesheet"
+        />
+
+        <!-- Google Material Icons -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
 
         <!-- Css -->
@@ -20,38 +25,30 @@
         <!-- Favicon -->
         <link rel="icon" href="./assets/img/favicon.svg" type="image/png" />
 
-        <title>Curriculum | Ainara Gil</title>
+        <title>Ainara Gil — Senior UX/UI & Web Designer | Portfolio</title>
     </head>
 
-    <body>
-        <!-- menu de navegacion -->
+    <body class="home-portfolio sobre-mi">
+        <!-- MENÚ DE NAVEGACIÓN -->
         <header class="header">
-            <nav class="header__nav">
+            <nav class="header__nav" aria-label="Navegación principal">
                 <ul class="header__list">
-                    <li class="header__item">
-                        <a class="header__link" href="#introduccion">Introducción</a>
-                    </li>
-                    <li class="header__item">
-                        <a class="header__link" href="#experiencia-laboral">Experiencia laboral</a>
-                    </li>
-                    <li class="header__item">
-                        <a class="header__link" href="#formacion-academica">Formación académica</a>
-                    </li>
-                    <li class="header__item">
-                        <a class="header__link" href="#habilidades">Habilidades</a>
-                    </li>
-                    <li class="header__item">
-                        <a class="header__link" href="#contacto">Contacto</a>
-                    </li>
+                    <li class="header__item"><a class="header__link" href="#inicio">Inicio</a></li>
+                    <li class="header__item"><a class="header__link" href="#sobre-mi">Sobre mí</a></li>
+                    <li class="header__item"><a class="header__link" href="#experiencia-laboral">Experiencia</a></li>
+                    <li class="header__item"><a class="header__link" href="#formacion-academica">Educación</a></li>
+                    <li class="header__item"><a class="header__link" href="#proyectos">Proyectos</a></li>
+                    <li class="header__item"><a class="header__link" href="#habilidades">Habilidades</a></li>
+                    <li class="header__item"><a class="header__link" href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
         </header>
 
         <main class="main">
-            <!-- hero-->
-            <section id="hero" class="section section--hero">
+            <!-- HERO -->
+            <section id="inicio" class="section section--hero">
                 <div class="container hero__container">
-                    <h1 class="section__title font-playfair">
+                    <h1 class="hero__title font-playfair">
                         <span class="text-senior">Senior</span>
                         <span class="text-uxui font-brockmann">UX/UI</span>
                         <span class="overly-1"></span>
@@ -60,34 +57,44 @@
                         <span class="overly-2"></span>
                     </h1>
 
-                    <img src="./assets/img/foto-linkedin.webp" alt="Foto de perfil de Ainara" />
+                    <img src="./assets/img/foto-linkedin.webp" alt="Foto de perfil de Ainara Gil" class="hero__photo" />
                 </div>
             </section>
 
-            <!-- introduccion -->
-            <section id="introduccion" class="section section--introduction">
+            <!-- SOBRE MÍ -->
+            <section id="sobre-mi" class="section section--introduction">
                 <div class="container introduction__container">
-                    <h2 class="section__title">
-                        <span class="beige-10"
-                            >Hola, soy <img src="./assets/img/favicon.svg" width="40px" alt="Icono de cara sonriente"
-                        /></span>
-                        <span class="font-playfair green-20">Ainara</span>
+                    <h2 class="introduction__title">
+                        <span class="beige-10">Hola, soy</span>
+                        <span class="introduction__flex-group">
+                            <img
+                                src="./assets/img/favicon.svg"
+                                width="40px"
+                                height="40px"
+                                alt="Carita sonriente"
+                                class="introduction__icon"
+                            />
+                            <span class="font-playfair green-20">Ainara</span>
+                        </span>
                     </h2>
 
-                    <p class="section__description beige-10">
-                        Una creativa apasionada por el diseño en cualquiera de sus formas. Como
-                        <span class="green-20">Senior UX/UI & Frontend</span>, disfruto uniendo lo mejor de dos mundos:
-                        mi sensibilidad por la estética, las interfaces y el branding, con mi capacidad técnica para
-                        construirlas. Me encanta saltar de la parte más visual y artística a la lógica del código,
-                        trabajando con herramientas como SASS, Tailwind o JavaScript para transformar ideas en productos
-                        digitales reales y usables.
-                    </p>
+                    <div class="introduction__body">
+                        <h3 class="introduction__headline">Diseño y construyo experiencias digitales</h3>
+                        <p class="section__description beige-10">
+                            Una creativa apasionada por el diseño en cualquiera de sus formas. Como
+                            <span class="green-20">Senior UX/UI &amp; Frontend</span>, disfruto uniendo lo mejor de dos
+                            mundos: mi sensibilidad por la estética, las interfaces y el branding, con mi capacidad
+                            técnica para construirlas. Me encanta saltar de la parte más visual y artística a la lógica
+                            del código, trabajando con herramientas como SASS, Tailwind o JavaScript para transformar
+                            problemas complejos en productos digitales accesibles, intuitivos y usables.
+                        </p>
+                    </div>
                 </div>
             </section>
 
-            <!-- Formacion academica y Experiencia laboral -->
+            <!-- EXPERIENCIA Y EDUCACIÓN -->
             <div class="section-row">
-                                <!-- experience -->
+                <!-- EXPERIENCIA -->
                 <section id="experiencia-laboral" class="section section--experience section-row__column">
                     <div class="container experience__container">
                         <div class="section__header section__header--experience">
@@ -105,7 +112,7 @@
                             <li class="job">
                                 <div class="job__header">
                                     <h3 class="subsection__title font-playfair">
-                                        Senior UX/UI & Web Designer - Frontend
+                                        Senior UX/UI &amp; Web Designer - Frontend
                                     </h3>
                                     <p class="job__company font-brockmann">IEBS Biztech School</p>
                                     <div class="job__time">
@@ -164,7 +171,7 @@
                             <li class="job">
                                 <div class="job__header">
                                     <h3 class="subsection__title font-playfair">
-                                        UX/UI Designer & Front-End Developer
+                                        UX/UI Designer &amp; Front-End Developer
                                     </h3>
                                     <p class="job__company font-brockmann">Flash Data SLU</p>
                                     <div class="job__time">
@@ -195,7 +202,7 @@
                     </div>
                 </section>
 
-                <!-- academic-training -->
+                <!-- EDUCACIÓN -->
                 <section id="formacion-academica" class="section section--academic-training section-row__column">
                     <div class="container academic-training__container">
                         <div class="section__header section__header--academic">
@@ -215,7 +222,7 @@
                             <p class="education__institution">LABASAD (En curso)</p>
                         </div>
 
-                         <div class="education">
+                        <div class="education">
                             <h3 class="subsection__title font-playfair">Educación universitaria</h3>
                             <h4 class="education__degree">Diseño Industrial - Textil e Indumentaria</h4>
                             <p class="education__institution">Universidad Nacional de Lanús, Argentina</p>
@@ -225,7 +232,7 @@
                             <h3 class="subsection__title font-playfair">Cursos y certificaciones</h3>
                             <ul class="course__list">
                                 <li class="course">
-                                    <img src="./assets/img/svg/points.svg" alt="Puntos" class="course__icon" />
+                                    <img src="./assets/img/svg/points.svg" alt="Punto" class="course__icon" />
                                     <div class="course__content">
                                         <h4 class="course__title">HTML5 semántico, CSS3, SASS, Tailwind, BEM</h4>
                                         <p class="course__description">
@@ -234,7 +241,7 @@
                                     </div>
                                 </li>
                                 <li class="course">
-                                    <img src="./assets/img/svg/points.svg" alt="Puntos" class="course__icon" />
+                                    <img src="./assets/img/svg/points.svg" alt="Punto" class="course__icon" />
                                     <div class="course__content">
                                         <h4 class="course__title">JavaScript</h4>
                                         <p class="course__description">
@@ -244,7 +251,7 @@
                                     </div>
                                 </li>
                                 <li class="course">
-                                    <img src="./assets/img/svg/points.svg" alt="Puntos" class="course__icon" />
+                                    <img src="./assets/img/svg/points.svg" alt="Punto" class="course__icon" />
                                     <div class="course__content">
                                         <h4 class="course__title">Accesibilidad web</h4>
                                         <p class="course__description">
@@ -253,7 +260,7 @@
                                     </div>
                                 </li>
                                 <li class="course">
-                                    <img src="./assets/img/svg/points.svg" alt="Puntos" class="course__icon" />
+                                    <img src="./assets/img/svg/points.svg" alt="Punto" class="course__icon" />
                                     <div class="course__content">
                                         <h4 class="course__title">Lighthouse, axe DevTools, WAVE, Stark, WebAIM</h4>
                                         <p class="course__description">
@@ -262,7 +269,7 @@
                                     </div>
                                 </li>
                                 <li class="course">
-                                    <img src="./assets/img/svg/points.svg" alt="Puntos" class="course__icon" />
+                                    <img src="./assets/img/svg/points.svg" alt="Punto" class="course__icon" />
                                     <div class="course__content">
                                         <h4 class="course__title">
                                             Conocimientos básicos en React y sólidos en Web Components
@@ -273,7 +280,7 @@
                                     </div>
                                 </li>
                                 <li class="course">
-                                    <img src="./assets/img/svg/points.svg" alt="Puntos" class="course__icon" />
+                                    <img src="./assets/img/svg/points.svg" alt="Punto" class="course__icon" />
                                     <div class="course__content">
                                         <h4 class="course__title">Figma, Adobe XD, diseño centrado en el usuario</h4>
                                         <p class="course__description">
@@ -285,10 +292,90 @@
                         </div>
                     </div>
                 </section>
-
             </div>
 
-            <!-- habilities -->
+            <!-- PROYECTOS -->
+            <section id="proyectos" class="section section--projects">
+                <div class="container projects__container">
+                    <div class="section__header section__header--projects">
+                        <span class="section__icon-wrapper material-symbols-rounded"> ar_on_you </span>
+                        <h2 class="section__title">Proyectos</h2>
+                    </div>
+
+                    <div class="projects__grid">
+                        <!-- 1. IEBS -->
+                        <a class="card" href="iebs.html">
+                            <img
+                                class="card__cover"
+                                src="./assets/img/shots/iebs/portada-iebs.png"
+                                alt="IEBS Digital School — UI Design & Frontend Layout"
+                            />
+                            <div class="card__body">
+                                <h3 class="card__title">IEBS Digital School</h3>
+                                <ul class="card__tags">
+                                    <li class="card__tag">UI/UX</li>
+                                    <li class="card__tag">Frontend</li>
+                                    <li class="card__tag">Tailwind</li>
+                                    <li class="card__tag">SEM &amp; Eventos</li>
+                                </ul>
+                            </div>
+                        </a>
+
+                        <!-- 2. EUROPEAN BLOCKCHAIN CONVENTION -->
+                        <a class="card" href="european-blockchain-convention.html">
+                            <img
+                                class="card__cover"
+                                src="./assets/img/shots/identidad-evento-blockchain/portada-ebc.jpg"
+                                alt="Portada del proyecto: identidad visual para European Blockchain Convention"
+                            />
+                            <div class="card__body">
+                                <h3 class="card__title">Identidad visual — European Blockchain Convention</h3>
+                                <ul class="card__tags">
+                                    <li class="card__tag">Branding</li>
+                                    <li class="card__tag">Print</li>
+                                    <li class="card__tag">Motion</li>
+                                </ul>
+                            </div>
+                        </a>
+
+                        <!-- 3. FLASH DATA -->
+                        <a class="card" href="flashdata.html">
+                            <img
+                                class="card__cover"
+                                src="./assets/img/shots/flashdata/portada-mobile.png"
+                                alt="Diseño móvil e interfaz responsive para Flash Data SLU"
+                            />
+                            <div class="card__body">
+                                <h3 class="card__title">Rediseño Web e Identidad — Flash Data</h3>
+                                <ul class="card__tags">
+                                    <li class="card__tag">UX/UI</li>
+                                    <li class="card__tag">Frontend</li>
+                                    <li class="card__tag">Branding</li>
+                                </ul>
+                            </div>
+                        </a>
+
+                        <!-- 4. ADONIA -->
+                        <a class="card" href="adonia.html">
+                            <img
+                                class="card__cover"
+                                src="./assets/img/shots/adonia/portada-adonia.jpg"
+                                alt="Diseño y desarrollo web para Adonia"
+                            />
+                            <div class="card__body">
+                                <h3 class="card__title">Diseño y desarrollo web — Adonia</h3>
+                                <ul class="card__tags">
+                                    <li class="card__tag">UX/UI</li>
+                                    <li class="card__tag">Frontend</li>
+                                    <li class="card__tag">Branding</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HABILIDADES -->
             <section id="habilidades" class="section section--habilities">
                 <div class="container habilities__container">
                     <div class="subtitle__container">
@@ -325,11 +412,12 @@
                 </div>
             </section>
 
+            <!-- CONTACTO -->
             <section id="contacto" class="section section--contact">
                 <div class="container contact__container">
                     <div class="subtitle__container">
                         <span class="section__icon-wrapper">
-                            <img src="./assets/img/svg/contacto.svg" alt="Icono de habilidades" class="section__icon" />
+                            <img src="./assets/img/svg/contacto.svg" alt="Icono de contacto" class="section__icon" />
                         </span>
                         <h2 class="section__title">Contacto</h2>
                         <span class="circle"></span>
@@ -340,7 +428,9 @@
                             class="section__link btn"
                             href="https://www.linkedin.com/in/ainaragil/"
                             target="_blank"
+                            rel="noopener noreferrer"
                             title="Ir a LinkedIn"
+                            aria-label="Perfil de LinkedIn de Ainara Gil"
                         >
                             <svg
                                 width="100%"
@@ -365,8 +455,7 @@
                             class="section__link btn"
                             href="mailto:ainaragilcm@gmail.com"
                             title="Enviar un email"
-                            target="_blank"
-                            title="Ir a gmail"
+                            aria-label="Enviar correo electrónico a Ainara Gil"
                         >
                             <svg
                                 width="100%"
@@ -395,9 +484,10 @@
                         <a
                             class="section__link btn"
                             href="https://www.instagram.com/ainara.design/?hl=es"
-                            title="Ir al Instagram"
                             target="_blank"
+                            rel="noopener noreferrer"
                             title="Ir a Instagram"
+                            aria-label="Perfil de Instagram de Ainara Gil"
                         >
                             <svg
                                 width="100%"
@@ -407,7 +497,7 @@
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path
-                                    d="M4 8C4 6.93913 4.42143 5.92172 5.17157 5.17157C5.92172 4.42143 6.93913 4 8 4H16C17.0609 4 18.0783 4.42143 18.8284 5.17157C19.5786 5.92172 20 6.93913 20 8V16C20 17.0609 19.5786 18.0783 18.8284 18.8284C18.0783 19.5786 17.0609 20 16 20H8C6.93913 20 5.92172 19.5786 5.17157 18.8284C4.42143 18.0783 4 17.0609 4 16V8Z"
+                                    d="M4 8C4 6.93913 4.42143 5.92172 5.17157 5.17157C5.92172 4.42143 6.93913 4 8 4H16C17.0609 4 18.0783 4.42143 18.8284 5.17157C19.5786 5.92172 20 6.93913 20 8V16C20 17.0609 19.5786 17.0609 18.8284 18.8284C18.0783 19.5786 17.0609 20 16 20H8C6.93913 20 5.92172 19.5786 5.17157 18.8284C4.42143 18.0783 4 17.0609 4 16V8Z"
                                     stroke="currentColor"
                                     stroke-width="2"
                                     stroke-linecap="round"
@@ -433,5 +523,9 @@
                 </div>
             </section>
         </main>
+
+        <footer class="footer">
+            <p>© 2026 Ainara Gil</p>
+        </footer>
     </body>
 </html>
