@@ -832,19 +832,59 @@ a {
 
 /* MEDIA QUERIES */
 @media (max-width: 850px) {
+  /* Contenedor relativo para alojar los degradados negros en los extremos */
+  .header__nav {
+    position: relative;
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+
+  /* Capa de degradado negro izquierda y derecha */
+  .header__nav::before,
+  .header__nav::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 42px;
+    z-index: 2;
+    pointer-events: none; /* Permite hacer clic o scroll a través del degradado */
+  }
+
+  /* Extremo izquierdo: negro sólido -> transparente */
+  .header__nav::before {
+    left: 0;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background: linear-gradient(to right, var(--black-100) 25%, transparent 100%);
+  }
+
+  /* Extremo derecho: transparente -> negro sólido */
+  .header__nav::after {
+    right: 0;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background: linear-gradient(to left, var(--black-100) 25%, transparent 100%);
+  }
+
+  /* Ajuste de la lista interna */
   .header .header__list {
     overflow-x: auto;
     overflow-y: hidden;
     width: 100%;
-    scrollbar-width: none;        
-    -ms-overflow-style: none;   
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     justify-content: start;
     flex-wrap: nowrap;
     gap: 24px;
+    padding-left: 28px;
+    padding-right: 28px;
     -webkit-overflow-scrolling: touch;
+    /* Eliminamos el mask-image */
+    -webkit-mask-image: none;
+    mask-image: none;
   }
 
-  /* Oculta la barra en Chrome, Safari, Android y navegadores WebKit */
   .header .header__list::-webkit-scrollbar {
     display: none;
     width: 0;
@@ -968,7 +1008,7 @@ a {
     padding: 40px 24px 80px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: 20px;
   }
 
   .contact__container .section__title {
