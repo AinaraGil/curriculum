@@ -274,7 +274,7 @@ a {
   gap: 12px;
 }
 
-/* En Desktop: el icono va primero (order: 1) y Ainara va después (order: 2) */
+
 .introduction__icon {
   order: 1;
   display: inline-block;
@@ -836,11 +836,19 @@ a {
     overflow-x: auto;
     overflow-y: hidden;
     width: 100%;
-    scrollbar-width: thin;
-    scrollbar-color: var(--black-100) transparent;
+    scrollbar-width: none;        
+    -ms-overflow-style: none;   
     justify-content: start;
     flex-wrap: nowrap;
     gap: 24px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Oculta la barra en Chrome, Safari, Android y navegadores WebKit */
+  .header .header__list::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
   }
 
   .section .container,
@@ -902,7 +910,9 @@ a {
 
   .introduction__title {
     flex-direction: row;
-    font-size: 2.6rem;
+    flex-wrap: wrap;
+    items: center;
+    font-size: 2.5rem;
     gap: 10px;
   }
 
